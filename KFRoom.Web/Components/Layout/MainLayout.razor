@@ -1,0 +1,76 @@
+﻿@inherits LayoutComponentBase
+@*頁首*@
+<nav class="navbar navbar-expand-lg bg-light sticky-top">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">練工坊</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        課程列表
+                    </a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        課程公告
+                    </a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        我的課程
+                    </a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        我的成績
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <NavLink class="nav-link" href="/Registration" Match="NavLinkMatch.All">
+                        <span class="bi bi-house-door-fill-nav-menu" aria-hidden="true"></span>註冊
+                    </NavLink>
+                </li>
+                <li class="nav-item">
+                    <NavLink class="nav-link" href="/MyAccount" Match="NavLinkMatch.All">
+                        <span class="bi bi-house-door-fill-nav-menu" aria-hidden="true"></span>我的帳號
+                    </NavLink>
+                </li>
+                @*1.使用者點按功能表列中的[註冊]，或是在 [登入]/[忘記密碼]/ [重設密碼] 頁面點按[註冊]。*@
+                <li class="nav-item">
+                    <NavLink class="nav-link" href="/Login" Match="NavLinkMatch.All">
+                        <span class="bi bi-house-door-fill-nav-menu" aria-hidden="true"></span>登入
+                    </NavLink>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+@*頁面內容顯示在這兒*@
+<div class="container-fluid">
+    @Body
+</div>
+@*頁尾*@
+<footer class="bg-body-tertiary text-center text-lg-start  fixed-bottom">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm">
+                &copy; 2025 - 練工坊
+            </div>
+            <div class="col-sm">
+                連絡電話：04-22671973
+            </div>
+            <div class="col-sm">
+                eMail：michael.hu561106@gmail.com
+            </div>
+        </div>
+    </div>
+</footer>
+
+<div id="blazor-error-ui" data-nosnippet>
+    An unhandled error has occurred.
+    <a href="." class="reload">Reload</a>
+    <span class="dismiss">🗙</span>
+</div>

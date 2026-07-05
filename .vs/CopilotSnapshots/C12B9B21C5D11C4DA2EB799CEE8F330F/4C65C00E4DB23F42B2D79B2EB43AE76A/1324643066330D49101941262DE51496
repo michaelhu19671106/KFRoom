@@ -1,0 +1,25 @@
+﻿@baseUrl = https://localhost:58572
+
+### AddMemberAsync - 不使用 Antiforgery
+POST {{baseUrl}}/AddMemberAsync
+Accept: application/json
+Content-Type: multipart/form-data; boundary=----KFRoomBoundary
+
+------KFRoomBoundary
+Content-Disposition: form-data; name="MemberAccount"
+
+user01
+------KFRoomBoundary
+Content-Disposition: form-data; name="MemberPassword"
+
+P@ssw0rd!
+------KFRoomBoundary
+Content-Disposition: form-data; name="MemberAvatar"; filename="web.png"
+Content-Type: image/png
+
+< ./web.png
+------KFRoomBoundary--
+````````
+
+
+# Response

@@ -1,0 +1,12 @@
+C:\資料D\教學\範例2021\13.軟體工程-專案開發實務\Ch10\KFRoom\KFRoom.Model\bin\Debug\net10.0\KFRoom.Model.deps.json
+C:\資料D\教學\範例2021\13.軟體工程-專案開發實務\Ch10\KFRoom\KFRoom.Model\bin\Debug\net10.0\KFRoom.Model.dll
+C:\資料D\教學\範例2021\13.軟體工程-專案開發實務\Ch10\KFRoom\KFRoom.Model\bin\Debug\net10.0\KFRoom.Model.pdb
+C:\資料D\教學\範例2021\13.軟體工程-專案開發實務\Ch10\KFRoom\KFRoom.Model\obj\Debug\net10.0\KFRoom.Model.csproj.AssemblyReference.cache
+C:\資料D\教學\範例2021\13.軟體工程-專案開發實務\Ch10\KFRoom\KFRoom.Model\obj\Debug\net10.0\KFRoom.Model.GeneratedMSBuildEditorConfig.editorconfig
+C:\資料D\教學\範例2021\13.軟體工程-專案開發實務\Ch10\KFRoom\KFRoom.Model\obj\Debug\net10.0\KFRoom.Model.AssemblyInfoInputs.cache
+C:\資料D\教學\範例2021\13.軟體工程-專案開發實務\Ch10\KFRoom\KFRoom.Model\obj\Debug\net10.0\KFRoom.Model.AssemblyInfo.cs
+C:\資料D\教學\範例2021\13.軟體工程-專案開發實務\Ch10\KFRoom\KFRoom.Model\obj\Debug\net10.0\KFRoom.Model.csproj.CoreCompileInputs.cache
+C:\資料D\教學\範例2021\13.軟體工程-專案開發實務\Ch10\KFRoom\KFRoom.Model\obj\Debug\net10.0\KFRoom.Model.dll
+C:\資料D\教學\範例2021\13.軟體工程-專案開發實務\Ch10\KFRoom\KFRoom.Model\obj\Debug\net10.0\refint\KFRoom.Model.dll
+C:\資料D\教學\範例2021\13.軟體工程-專案開發實務\Ch10\KFRoom\KFRoom.Model\obj\Debug\net10.0\KFRoom.Model.pdb
+C:\資料D\教學\範例2021\13.軟體工程-專案開發實務\Ch10\KFRoom\KFRoom.Model\obj\Debug\net10.0\ref\KFRoom.Model.dll

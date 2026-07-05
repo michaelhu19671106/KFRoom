@@ -1,0 +1,51 @@
+﻿using Microsoft.AspNetCore.Components.Forms;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
+namespace KFRoom.Model.RequestModel;
+
+public class RegistrationModel
+{
+    [Required(ErrorMessage = "姓名必填")]
+    [StringLength(30, MinimumLength = 2, ErrorMessage = "姓名長度為2~30個文字")]
+    public string MemberName { get; set; } = null!;
+    [Required(ErrorMessage = "暱稱必填")]
+    [StringLength(15, MinimumLength = 2, ErrorMessage = "暱稱長度為2~12個文字")]
+    public string MemberNickName { get; set; } = null!;
+    [Required(ErrorMessage = "電話必填")]
+    [StringLength(10, MinimumLength = 9, ErrorMessage = "電話必須是10位數字")]
+    [RegularExpression(@"^[0-9]*$", ErrorMessage = "電話只能是數字")]
+    public string MemberPhone { get; set; } = null!;
+    [Required(ErrorMessage = "LineId必填")]
+    [StringLength(30, MinimumLength = 2, ErrorMessage = "LineId長度為2~30個文字")]
+    public string MemberLineId { get; set; } = null!;
+    [Required(ErrorMessage = "eMail必填")]
+    [EmailAddress(ErrorMessage = "eMai格式不符")]
+    public string MemberEmail { get; set; } = null!;
+    [Required(ErrorMessage = "性別必填")]
+    public string MemberSex { get; set; } = null!;
+    [RegularExpression(@"^(2[0-3]|1[0-9]|[1-9])$", ErrorMessage = "請選擇職業類別")]
+    public int JobTypeId { get; set; }
+    [Required(ErrorMessage = "職業說明必填")]
+    [StringLength(60, MinimumLength = 2, ErrorMessage = "職業說明長度為2~60個文字")]
+    public string JobDescription { get; set; }
+    [Required(ErrorMessage = "對直播課程是否有興趣必填")]
+    public bool InterestedInLiveYes { get; set; } = true;
+    [RegularExpression(@"^(2[0-3]|1[0-9]|[1-9])$", ErrorMessage = "請選擇縣市名稱")]
+    public int CityCode { get; set; }
+    [Required(ErrorMessage = "地址必填")]
+    [StringLength(60, MinimumLength = 5, ErrorMessage = "地址長度為5~60個文字")]
+    public string Address { get; set; } = null!;
+    public IBrowserFile? MemberAvatar { get; set; }
+    [Required(ErrorMessage = "密碼必填")]
+    [StringLength(12, MinimumLength = 8, ErrorMessage = "密碼長度為8~12個文字")]
+    [RegularExpression(@"^[a-zA-Z0-9]*$", ErrorMessage = "密碼只能是英數字")]
+    public string MemberPassword { get; set; } = null!;
+    // 這不在資料庫中，只是用來比對密碼是否相同
+    [NotMapped]
+    [Required(ErrorMessage = "請再次輸入密碼")]
+    [Compare("MemberPassword", ErrorMessage = "兩次輸入密嗎內容必須相同")]
+    public string MemberPasswordAgain { get; set; } = null!;
+    [Required(ErrorMessage = "生日必填")]
+    public DateTime MemberBirthday { get; set; }
+}

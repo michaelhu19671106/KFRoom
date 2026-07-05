@@ -1,0 +1,177 @@
+﻿@*2.系統導向到[會員註冊]頁面。*@
+@page "/Registration"
+@*加入InteractiveServer，InputFile OnChange="OnInputFileChange才會觸發*@
+@rendermode InteractiveServer
+@*引入Model/Service namespace*@
+@using KFRoom.Model.RequestModel
+@using KFRoom.Model.ResponseModel
+@using KFRoom.Web.Services
+@*注入Service層*@
+@inject AccountService accountService
+<div class="container">
+    <h3>註冊會員</h3>
+    @*4.使用者點按[註冊]。*@
+    <EditForm Model="@registrationModel" FormName="RegistrationForm" OnValidSubmit="@RegistrationMember">
+        @*5.系統在點按[註冊]事件驗證使用者輸入資料符合規則：定義在KFRoom.Model.RequestModel.RegistrationModel。*@
+        <DataAnnotationsValidator />
+        <label for="MemberName">姓名*(2~30個中英文字元)</label>
+        <InputText id="MemberName"
+                   class="form-control"
+                   @bind-Value="registrationModel.MemberName" />
+        <ValidationMessage For="@(() => registrationModel.MemberName)" />
+
+        <label for="MemberNickName">暱稱*(2~15個中英文字元)</label>
+        <InputText id="MemberNickName"
+                   class="form-control"
+                   @bind-Value="registrationModel.MemberNickName" />
+        <ValidationMessage For="@(() => registrationModel.MemberNickName)" />
+
+        <label for="MemberBirthday">生日</label>
+        <InputDate id="memberBirthday"
+                   class="form-control"
+                   @bind-Value="registrationModel.MemberBirthday" />
+        <ValidationMessage For="@(() => registrationModel.MemberBirthday)" />
+
+        <label for="MemberPhone">手機*(9~10數字)</label>
+        <InputText id="MemberPhone"
+                   class="form-control"
+                   @bind-Value="registrationModel.MemberPhone" />
+        <ValidationMessage For="@(() => registrationModel.MemberPhone)" />
+
+        <label for="MemberLineId">Line Id*(2~30個中英文字元及數字)</label>
+        <InputText id="MemberLineId"
+                   class="form-control"
+                   @bind-Value="registrationModel.MemberLineId" />
+        <ValidationMessage For="@(() => registrationModel.MemberLineId)" />
+
+        <label for="MemberEmail">email*</label>
+        <InputText id="MemberEmail"
+                   type="email"
+                   class="form-control"
+                   @bind-Value="registrationModel.MemberEmail" />
+        <ValidationMessage For="@(() => registrationModel.MemberEmail)" />
+
+        <label for="MemberSex">性別*</label>
+        <InputSelect id="MemberSex" class="form-control" @bind-Value="registrationModel.MemberSex">
+            <option value="">-- 請選擇 --</option>
+            <option value="男">男性</option>
+            <option value="女">女性</option>
+            <option value="其他">其他</option>
+        </InputSelect>
+        <ValidationMessage For="@(() => registrationModel.MemberSex)" />
+        <br />
+
+        <label for="JobTypeId">職業類別*</label>
+        <InputSelect id="JobTypeId" class="form-control" @bind-Value="registrationModel.JobTypeId">
+            <option value="0">-- 請選擇 --</option>
+            <option value="1">民意代表、主管及經理人員</option>
+            <option value="2">專業人員</option>
+        </InputSelect>
+        <ValidationMessage For="@(() => registrationModel.JobTypeId)" />
+        <br />
+
+        <label for="JobDescription">職業說明*(60個中英文字元以內)</label>
+        <InputText id="JobDescription"
+                   class="form-control"
+                   @bind-Value="registrationModel.JobDescription" />
+        <ValidationMessage For="@(() => registrationModel.JobDescription)" />
+
+        <label for="InterestedInLive">對直播課程是否有興趣*</label><br />
+        <InputRadioGroup @bind-Value="registrationModel.InterestedInLiveYes">
+            <InputRadio Value="true" /> 是
+            <InputRadio Value="false" /> 否
+        </InputRadioGroup><br />
+        <ValidationMessage For="@(() => registrationModel.InterestedInLiveYes)" />
+
+        <label for="CityCode">居住城市*</label>
+        <InputSelect id="CityCode" class="form-control" @bind-Value="registrationModel.CityCode">
+            <option value="0">-- 請選擇 --</option>
+            <option value="1">台北市</option>
+            <option value="2">台中市</option>
+        </InputSelect>
+        <ValidationMessage For="@(() => registrationModel.CityCode)" />
+        <br />
+
+        <label for="Address">居住地址*(60個字元以內)</label>
+        <InputTextArea id="Address"
+                       class="form-control"
+                       rows="3"
+                       @bind-Value="registrationModel.Address">
+        </InputTextArea>
+        <ValidationMessage For="@(() => registrationModel.Address)" />
+
+        <label for="MemberAvatar">頭像</label>
+        <InputFile name="MemberAvatar" class="form-control" OnChange="OnInputFileChange" />
+
+        <label for="MemberPassword">密碼*(8~12個字元)</label>
+        <InputText id="MemberPassword"
+                   type="password"
+                   class="form-control"
+                   @bind-Value="registrationModel.MemberPassword" />
+        <ValidationMessage For="@(() => registrationModel.MemberPassword)" />
+
+        <label for="MemberPasswordAgain">再次輸入密碼*(同密碼)</label>
+        <InputText id="MemberPasswordAgain"
+                   type="password"
+                   class="form-control"
+                   @bind-Value="registrationModel.MemberPasswordAgain" />
+        <ValidationMessage For="@(() => registrationModel.MemberPasswordAgain)" />
+
+        @*顯示執行結果訊息*@
+        @if (!string.IsNullOrEmpty(errorMessage))
+        {
+            <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                @errorMessage
+                <button type="button" class="btn-close" @onclick="() => errorMessage = string.Empty"></button>
+            </div>
+        }
+        @*4.使用者點按[註冊]。*@    
+        <button class="btn btn-outline-primary" type="submit">
+            註冊
+        </button>
+    </EditForm>
+</div>
+
+@code {
+    [SupplyParameterFromForm]  @*表單輸入值繫結至Model對應欄位*@
+    private RegistrationModel registrationModel { get; set; } = new RegistrationModel();
+    @*顯示執行結果訊息*@
+    private string errorMessage = string.Empty;
+    @*<InputFile>改變選取圖片時觸發，必須將選取圖檔指定給欲上傳之registrationModel.MemberAvatar*@
+    private async Task OnInputFileChange(InputFileChangeEventArgs e)
+    {
+        var files = e.GetMultipleFiles();
+        if (files.Count > 0)
+        {
+            registrationModel.MemberAvatar = (IFormFile)files[0];
+        }
+    }
+    @*點按註冊時註冊會員*@
+    private async Task RegistrationMember()
+    {
+        // 5.系統在點按[註冊]事件驗證使用者輸入資料符合規則。
+        try
+        {
+            // 6.系統在點按[註冊]事件呼叫前端Service層AddMemberAsync方法並傳送3輸入資料。
+            StandardResponse req = await accountService.AddMemberAsync(registrationModel);
+            if (req.code == "0")
+            {
+                // 17.系統在點按[註冊]事件判斷16回傳code==0。
+                // 18.系統顯示[註冊成功] 並導向登入頁面。
+                errorMessage = req.message;
+                // NavManager.NavigateTo($"/Login");  // 登入頁面尚未實作，暫不導向
+            }
+            else
+            {
+                // 17a.系統在點按[確認驗證]事件判斷16回傳code!=0。
+                // 17a - 1.系統顯示[16回傳message]。
+                errorMessage = req.message;
+            }
+        }
+        catch (Exception ex)
+        {
+            errorMessage = $"註冊失敗: {ex.Message}";
+        }
+        StateHasChanged();  // 強制重新渲染頁面以顯示訊息
+    }
+}

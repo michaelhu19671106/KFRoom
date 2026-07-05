@@ -1,0 +1,103 @@
+﻿using KFRoom.ApiService.Domains;
+using KFRoom.ApiService.Infra;
+using KFRoom.ApiService.Repository;
+using KFRoom.Model.RequestModel;
+using KFRoom.Model.ResponseModel;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.Data.SqlClient;
+using Microsoft.AspNetCore.Antiforgery;
+
+var builder = WebApplication.CreateBuilder(args);
+
+// Add service defaults & Aspire client integrations.
+builder.AddServiceDefaults();
+
+// 注冊相關服務
+builder.Services.AddSingleton<AzureBlobStorageService>();
+builder.Services.AddSingleton<SecurityService>();
+
+//builder.Services.AddScoped(sp =>
+//{
+//    var connectionString = builder.Configuration.GetConnectionString("sqldb");
+//    if (string.IsNullOrWhiteSpace(connectionString))
+//    {
+//        throw new InvalidOperationException("找不到資料庫連線字串 'sqldb'。");
+//    }
+
+//    return new SqlConnection(connectionString);
+//});
+
+builder.Services.AddScoped<IAccountRepository, MSSQLAccountRepository>();
+builder.Services.AddScoped<AccountDomain>();
+
+// Add services to the container.
+builder.Services.AddProblemDetails();
+builder.Services.AddAntiforgery();
+
+// Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
+builder.Services.AddOpenApi();
+
+var app = builder.Build();
+
+app.UseAntiforgery();
+
+// Configure the HTTP request pipeline.
+app.UseExceptionHandler();
+
+if (app.Environment.IsDevelopment())
+{
+    app.MapOpenApi();
+}
+
+string[] summaries = ["Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"];
+
+app.MapGet("/", () => "API service is running. Navigate to /weatherforecast to see sample data.");
+
+app.MapGet("/weatherforecast", () =>
+{
+    var forecast = Enumerable.Range(1, 5).Select(index =>
+        new WeatherForecast
+        (
+            DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
+            Random.Shared.Next(-20, 55),
+            summaries[Random.Shared.Next(summaries.Length)]
+        ))
+        .ToArray();
+    return forecast;
+})
+.WithName("GetWeatherForecast");
+
+// AddMemberAsync API：呼叫Domain層將會員頭像儲存到會員圖像儲存區，並新增一筆會員記錄。
+app.MapPost("/AddMemberAsync", async Task<StandardResponse> ([FromForm] RegistrationModel model, AccountDomain accountDomain) =>
+{
+    StandardResponse response = new StandardResponse();
+    try
+    {
+        var ret = await accountDomain.AddMemberAsync(model);
+    }
+    catch (Exception ex)
+    {
+        // 14a.系統在AddMember API判斷8~13執行失敗。
+        // 14a-1.系統依API規格回傳執行失敗資料。
+        response.code = "1";
+        response.message = "Fail to add member";
+        return response;
+    }
+    // 14.系統在AddMember API判斷8~13執行成功。
+    // 15.系統在AddMember API回傳執行成功資料。
+    response.code = "0";
+    response.message = "finished";
+    return response;
+})
+.RequireAntiforgery()
+.WithName("MemberRegistration")
+.DisableAntiforgery(false);
+
+app.MapDefaultEndpoints();
+
+app.Run();
+
+record WeatherForecast(DateOnly Date, int TemperatureC, string? Summary)
+{
+    public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
+}

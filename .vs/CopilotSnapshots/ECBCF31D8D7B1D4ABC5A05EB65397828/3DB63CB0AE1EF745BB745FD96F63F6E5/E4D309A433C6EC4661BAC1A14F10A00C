@@ -1,0 +1,52 @@
+﻿using KFRoom.ApiService.Infra;
+using KFRoom.Model.RequestModel;
+using KFRoom.ApiService.Repository;
+using Microsoft.AspNetCore.Mvc;
+
+namespace KFRoom.ApiService.Domains;
+
+public class AccountDomain
+{
+    private IAccountRepository _accountRepository;
+    private AzureBlobStorageService _azureBlobStorageService;
+    private SecurityService _securityService;
+    private IConfiguration _configuration;
+    // 注入Infra/Repository層的服務以及配置服務
+    public AccountDomain(IAccountRepository accountRepository, AzureBlobStorageService azureBlobStorageService, SecurityService securityService, IConfiguration configuration)
+    {
+        _accountRepository = accountRepository;
+        _azureBlobStorageService = azureBlobStorageService;
+        _securityService = securityService;
+        _configuration = configuration;
+    }
+    // 呼叫Infra層將會員頭像儲存到會員圖像儲存區。呼叫Repository層新增一筆會員記錄。
+    public async Task<int> AddMemberAsync(RegistrationModel model)
+    {
+        int ret = 0;
+        var defaultContainer = _configuration["MemberAvatar:DefaultContainer"];
+        var defaultFilename = _configuration["MemberAvatar:DefaultFilename"];
+        var filePath = "";
+        string filename = model.MemberAvatar?.Name ?? "";
+        if (!string.IsNullOrEmpty(filename))
+        {
+            // 9-01.系統Domain層AddMember方法判斷8有上傳頭像。
+            // 9-02.系統設定fileName=" 8上傳頭像之filename"。
+            // 9.系統呼叫Infra層儲存上傳頭像。
+            await _azureBlobStorageService.UploadFileAsync((FileStream)model.MemberAvatar, defaultContainer, filename);
+        }
+        else
+        {
+            // 9-01.系統判斷8沒有上傳頭像。
+            //    9-01a-1.系統設定fileName ="default_avatar.png"。
+            //  9 - 01a - 2.回10。
+            filename = defaultFilename;
+        }
+        // 10.系統呼叫Service層加密密碼並產生Salt值。
+        string hashed = _securityService.HashPassword(model.MemberPassword, out byte[] salt);
+        model.MemberPassword = hashed;
+        // 11.系統在Domain層AddMember方法呼叫Repository層新增一筆會員記錄。
+        var spRet = await _accountRepository.AddMember(model, salt, filename);
+        // Repository層傳回值為0傳回0，不為0回傳1
+        return spRet == 0 ? 0 : 1;
+    }
+}

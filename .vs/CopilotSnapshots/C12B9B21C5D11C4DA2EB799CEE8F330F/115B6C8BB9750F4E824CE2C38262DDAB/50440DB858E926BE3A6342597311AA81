@@ -1,0 +1,32 @@
+﻿@baseUrl = https://localhost:59234
+
+### 1) 先取得 Antiforgery Token
+# @name antiforgery
+GET {{baseUrl}}/antiforgery/token
+Accept: application/json
+
+### 2) 再呼叫 AddMemberAsync
+### 請先執行上一段，讓 .http 用戶端保存 cookie 後再執行這段
+POST {{baseUrl}}/AddMemberAsync
+Accept: application/json
+X-CSRF-TOKEN: {{antiforgery.response.body.$.token}}
+Content-Type: multipart/form-data; boundary=----KFRoomBoundary
+
+------KFRoomBoundary
+Content-Disposition: form-data; name="MemberAccount"
+
+user01
+------KFRoomBoundary
+Content-Disposition: form-data; name="MemberPassword"
+
+P@ssw0rd!
+------KFRoomBoundary
+Content-Disposition: form-data; name="MemberAvatar"; filename="web.png"
+Content-Type: image/png
+
+< ./web.png
+------KFRoomBoundary--
+````````
+
+
+# Response

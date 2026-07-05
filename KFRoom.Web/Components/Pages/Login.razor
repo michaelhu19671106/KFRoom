@@ -1,0 +1,84 @@
+﻿@*2.系統導向到[登入]頁面。*@
+@page "/Login"
+@*由於要呼叫JS原生功能，因此將RenderMode改為InteractiveServer(預設是SSR)，並關閉prerender*@
+@rendermode @(new InteractiveServerRenderMode(prerender: false))
+@using KFRoom.Model.ResponseModel
+@using KFRoom.Model.RequestModel
+@using KFRoom.Web.Services
+@*注入Service層*@
+@inject AccountService accountService
+@*注入NavigationManager以進行頁面切換*@
+@inject NavigationManager NavManager
+@*注入SessionSrorage套件*@
+@* @inject ISessionStorageService sessionStorage *@
+@inject IJSRuntime JS
+<div class="container">
+    <PageTitle>登入</PageTitle>
+    <h3>登入</h3>
+    <EditForm Model="@loginModel" FormName="LoginForm" OnValidSubmit="@MemberLogin">
+        @* 5.系統在點按[登入]事件驗證輸入資料符合規則。 *@
+        <DataAnnotationsValidator />
+        <ValidationSummary />
+        <label for="email">email*</label>
+        <InputText id="email"
+                   class="form-control"
+                   @bind-Value="loginModel.MemberEmail" />
+        <label for="password">密碼*</label>
+        <InputText id="password"
+                   type="password"
+                   class="form-control"
+                   @bind-Value="loginModel.MemberPassword" />
+        @if (!string.IsNullOrEmpty(errorMessage))
+        {
+            <Alert Color="AlertColor.Warning" Dismissable="true">@errorMessage</Alert>
+        }
+        <button class="btn btn-outline-primary" type="submit">
+            登入
+        </button>
+        <NavLink class="button" href="/ForgetPassword" Match="NavLinkMatch.All">
+            <span class="bi bi-house-door-fill-nav-menu" aria-hidden="true"></span>忘記密碼
+        </NavLink>
+        <span>,</span>
+        @* 4.使用者點按[登入]。 *@
+        <NavLink class="button" href="/Registration" Match="NavLinkMatch.All">
+            <span class="bi bi-house-door-fill-nav-menu" aria-hidden="true"></span>註冊
+        </NavLink>
+    </EditForm>
+</div>
+@code {
+    @*EditForm繫結Model*@
+    [SupplyParameterFromForm]  @*表單輸入值繫結至Model對應欄位*@
+    private LoginModel loginModel { set; get; } = new LoginModel();
+    @*顯示執行結果訊息*@
+    private string errorMessage = string.Empty;
+    @*點按登入時驗證帳/密*@
+    private async Task MemberLogin()
+    {
+        try
+        {
+            // 6.系統呼叫Client端AccountService.Login方法。
+            LoginResponse req = await accountService.LoginAsync(loginModel);
+            if (req.code == "0")
+            {
+                // 18.系統在點按[登入]事件判斷17回傳Code==0。
+                // 19.系統將回傳AccessToken暫存在SessionStorage。
+                // sessionStorage.SetItem("JWT", req.accessToken);
+                await JS.InvokeVoidAsync("sessionStorage.setItem", "JWT", req.accessToken);
+                // 20.系統顯示[登入成功]，並導向到首頁。
+                NavManager.NavigateTo($"/");
+            }
+            else
+            {
+                // 18a.系統在點按[登入]事件判斷17回傳Code!=0。
+                // 18a - 1.系統在登入頁面顯示[17回傳message]。
+                errorMessage = $"登入失敗: {req.message}";
+            }
+        }
+        catch (Exception ex)
+        {
+            // 發生例外時顯示錯誤訊息
+            errorMessage = $"登入失敗: {ex.Message}";
+        }
+        StateHasChanged();  // 強制重新渲染頁面以顯示訊息
+    }
+}

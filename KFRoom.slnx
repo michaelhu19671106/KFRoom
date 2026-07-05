@@ -1,0 +1,9 @@
+<Solution>
+  <Project Path="KFRoom.ApiService/KFRoom.ApiService.csproj" />
+  <Project Path="KFRoom.AppHost/KFRoom.AppHost.csproj" />
+  <Project Path="KFRoom.Model/KFRoom.Model.csproj" Id="55578fd7-f577-4be0-80bd-af7173dbccda" />
+  <Project Path="KFRoom.ServiceDefaults/KFRoom.ServiceDefaults.csproj" />
+  <Project Path="KFRoom.Tests/KFRoom.Tests.csproj" />
+  <Project Path="KFRoom.UnitTest/KFRoom.UnitTest.csproj" Id="61e7b2db-fd75-4d64-bbe3-07502642e91c" />
+  <Project Path="KFRoom.Web/KFRoom.Web.csproj" />
+</Solution>

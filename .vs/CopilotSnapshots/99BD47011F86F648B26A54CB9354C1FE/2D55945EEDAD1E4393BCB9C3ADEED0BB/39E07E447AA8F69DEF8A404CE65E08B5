@@ -1,0 +1,78 @@
+﻿using Dapper;
+using KFRoom.Model.DTO;
+using KFRoom.Model.RequestModel;
+using Microsoft.Data.SqlClient;
+using System.Data;
+namespace KFRoom.ApiService.Repository;
+public class MSSQLAccountRepository : IAccountRepository
+{
+    public string connectionString { get; set; }
+    // Aspire會在建構子中注入IConfiguration物件，我們可從中取得連線字串
+    public MSSQLAccountRepository(IConfiguration config)
+    {
+        connectionString = config["ConnectionStrings:sqldb"];
+        if (string.IsNullOrWhiteSpace(connectionString))
+        {
+            throw new InvalidOperationException("找不到 SQL Database 連線字串 'sqldb'。");
+        }
+    }
+    // 新增一筆會員資料
+    public async Task<int> AddMemberAsync(RegistrationModel registrationModel, byte[] salt, string memberAvatar)
+    {
+        // 連接資料庫
+        using (SqlConnection con = new SqlConnection(connectionString))
+        {
+            // 開啟連接
+            await con.OpenAsync();
+            // 設定預存程序參數
+            var parameters = new DynamicParameters();
+            parameters.Add("MemberName", registrationModel.MemberName, DbType.String, size: 30);
+            parameters.Add("MemberNickName", registrationModel.MemberNickName, DbType.String, size: 15);
+            parameters.Add("MemberBirthday", registrationModel.MemberBirthday, DbType.DateTime);
+            parameters.Add("CityCode", registrationModel.CityCode, DbType.Int32);
+            parameters.Add("Address", registrationModel.Address, DbType.String, size: 100);
+            parameters.Add("MemberPhone", registrationModel.MemberPhone, DbType.String, size: 12);
+            parameters.Add("MemberEmail", registrationModel.MemberEmail, DbType.String, size: 100);
+            parameters.Add("MemberSex", registrationModel.MemberSex, DbType.String, size: 10);
+            parameters.Add("MemberPassword", registrationModel.MemberPassword, DbType.String, size: 64);
+            parameters.Add("MemberLineId", registrationModel.MemberLineId, DbType.String, size: 50);
+            parameters.Add("MemberAvatar", memberAvatar, DbType.String, size: 100);
+            parameters.Add("StatusId", 1, DbType.Int32); // 預設狀態ID為1
+            parameters.Add("JobTypeId", registrationModel.JobTypeId, DbType.Int32);
+            parameters.Add("JobDescription", registrationModel.JobDescription, DbType.String, size: 100);
+            parameters.Add("InterestedInLive", registrationModel.InterestedInLiveYes, DbType.Boolean);
+            parameters.Add("Salt", salt, DbType.Binary, size: 16);
+            // 呼叫預存程序執行SQL敘述，並傳入參數
+            int ret = await con.ExecuteAsync("sp_AddMember", parameters, commandType: CommandType.StoredProcedure);
+            // 回傳預存程序執行結果
+            return ret;
+        }
+    }
+    // 以MemberEmail讀取會員資料表"Member"一筆記錄之Salt值。
+    public async Task<byte[]> GetMemberSalt(string MemberEmail)
+    {
+        using (SqlConnection con = new SqlConnection(connectionString))
+        {
+            await con.OpenAsync();
+            var parameters = new DynamicParameters();
+            parameters.Add("MemberEmail", MemberEmail, DbType.String, size: 100);
+            // 呼叫預存程序執行SQL敘述，並傳入參數
+            var salt = await con.QueryFirstOrDefaultAsync<byte[]>("sp_GetMemberSalt", parameters, commandType: CommandType.StoredProcedure);
+            return salt ?? Array.Empty<byte>();
+        }
+    }
+    // 以MemberEmail/MemberPassword讀取會員資料表"Member"之一筆記錄
+    public async Task<MemberDTO?> GetMemberByEmailPassword(string MemberEmail, string MemberPassword)
+    {
+        using (SqlConnection con = new SqlConnection(connectionString))
+        {
+            await con.OpenAsync();
+            var parameters = new DynamicParameters();
+            parameters.Add("MemberEmail", MemberEmail, DbType.String, size: 100);
+            parameters.Add("MemberPassword", MemberPassword, DbType.String, size: 50);
+            // 呼叫預存程序執行SQL敘述，並傳入參數
+            var member = await con.QueryFirstOrDefaultAsync<MemberDTO>("sp_ValidateMember", parameters, commandType: CommandType.StoredProcedure);
+            return member;
+        }
+    }
+}

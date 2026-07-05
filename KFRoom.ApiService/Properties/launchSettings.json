@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json.schemastore.org/launchsettings.json",
+  "profiles": {
+    "http": {
+      "commandName": "Project",
+      "dotnetRunMessages": true,
+      "launchBrowser": false,
+      "applicationUrl": "http://localhost:5513",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+        // Aspire 映射到 SQLDB_CONNECTIONSTRING，在代码中通过 Environment.GetEnvironmentVariable("SQLDB_CONNECTIONSTRING") 获取连接字符串
+        //"SQLDB_CONNECTIONSTRING": "Server=LAPTOP-BJBNG77F\\SQLEXPRESS;Database=KRDB;TrustServerCertificate=True;User ID=sa;Password=black@1106"
+      }
+    },
+    "https": {
+      "commandName": "Project",
+      "dotnetRunMessages": true,
+      "launchBrowser": false,
+      "applicationUrl": "https://localhost:7432;http://localhost:5513",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+        //"SQLDB_CONNECTIONSTRING": "Server=LAPTOP-BJBNG77F\\SQLEXPRESS;Database=KRDB;TrustServerCertificate=True;User ID=sa;Password=black@1106"
+      }
+    }
+  }
+}

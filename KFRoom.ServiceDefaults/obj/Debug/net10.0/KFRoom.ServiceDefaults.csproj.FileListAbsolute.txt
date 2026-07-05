@@ -1,0 +1,12 @@
+C:\資料D\教學\範例2021\13.軟體工程-專案開發實務\Ch10\KFRoom\KFRoom.ServiceDefaults\bin\Debug\net10.0\KFRoom.ServiceDefaults.deps.json
+C:\資料D\教學\範例2021\13.軟體工程-專案開發實務\Ch10\KFRoom\KFRoom.ServiceDefaults\bin\Debug\net10.0\KFRoom.ServiceDefaults.dll
+C:\資料D\教學\範例2021\13.軟體工程-專案開發實務\Ch10\KFRoom\KFRoom.ServiceDefaults\bin\Debug\net10.0\KFRoom.ServiceDefaults.pdb
+C:\資料D\教學\範例2021\13.軟體工程-專案開發實務\Ch10\KFRoom\KFRoom.ServiceDefaults\obj\Debug\net10.0\KFRoom.ServiceDefaults.csproj.AssemblyReference.cache
+C:\資料D\教學\範例2021\13.軟體工程-專案開發實務\Ch10\KFRoom\KFRoom.ServiceDefaults\obj\Debug\net10.0\KFRoom.ServiceDefaults.GeneratedMSBuildEditorConfig.editorconfig
+C:\資料D\教學\範例2021\13.軟體工程-專案開發實務\Ch10\KFRoom\KFRoom.ServiceDefaults\obj\Debug\net10.0\KFRoom.ServiceDefaults.AssemblyInfoInputs.cache
+C:\資料D\教學\範例2021\13.軟體工程-專案開發實務\Ch10\KFRoom\KFRoom.ServiceDefaults\obj\Debug\net10.0\KFRoom.ServiceDefaults.AssemblyInfo.cs
+C:\資料D\教學\範例2021\13.軟體工程-專案開發實務\Ch10\KFRoom\KFRoom.ServiceDefaults\obj\Debug\net10.0\KFRoom.ServiceDefaults.csproj.CoreCompileInputs.cache
+C:\資料D\教學\範例2021\13.軟體工程-專案開發實務\Ch10\KFRoom\KFRoom.ServiceDefaults\obj\Debug\net10.0\KFRoom.ServiceDefaults.dll
+C:\資料D\教學\範例2021\13.軟體工程-專案開發實務\Ch10\KFRoom\KFRoom.ServiceDefaults\obj\Debug\net10.0\refint\KFRoom.ServiceDefaults.dll
+C:\資料D\教學\範例2021\13.軟體工程-專案開發實務\Ch10\KFRoom\KFRoom.ServiceDefaults\obj\Debug\net10.0\KFRoom.ServiceDefaults.pdb
+C:\資料D\教學\範例2021\13.軟體工程-專案開發實務\Ch10\KFRoom\KFRoom.ServiceDefaults\obj\Debug\net10.0\ref\KFRoom.ServiceDefaults.dll

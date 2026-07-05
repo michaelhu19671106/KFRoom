@@ -1,0 +1,240 @@
+{
+  "openapi": "3.1.1",
+  "info": {
+    "title": "KFRoom.ApiService | v1",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://localhost:50722"
+    },
+    {
+      "url": "http://localhost:50723"
+    }
+  ],
+  "paths": {
+    "/Account/AddMemberAsync": {
+      "post": {
+        "tags": [
+          "KFRoom.ApiService"
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "$ref": "#/components/schemas/RegistrationModel"
+              }
+            },
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "$ref": "#/components/schemas/RegistrationModel"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StandardResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Account/LoginAsync": {
+      "post": {
+        "tags": [
+          "KFRoom.ApiService"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginModel"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LoginResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "IFormFile": {
+        "type": [
+          "null",
+          "string"
+        ],
+        "format": "binary"
+      },
+      "LoginModel": {
+        "required": [
+          "memberEmail",
+          "memberPassword"
+        ],
+        "type": "object",
+        "properties": {
+          "memberEmail": {
+            "type": "string"
+          },
+          "memberPassword": {
+            "maxLength": 12,
+            "minLength": 8,
+            "pattern": "^[a-zA-Z0-9]*$",
+            "type": "string"
+          }
+        }
+      },
+      "LoginResponse": {
+        "type": "object",
+        "properties": {
+          "accessToken": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "code": {
+            "type": "string"
+          },
+          "message": {
+            "type": "string"
+          }
+        }
+      },
+      "RegistrationModel": {
+        "required": [
+          "memberName",
+          "memberNickName",
+          "memberPhone",
+          "memberLineId",
+          "memberEmail",
+          "memberSex",
+          "jobDescription",
+          "interestedInLiveYes",
+          "address",
+          "memberPassword",
+          "memberPasswordAgain",
+          "memberBirthday"
+        ],
+        "type": "object",
+        "properties": {
+          "memberName": {
+            "maxLength": 30,
+            "minLength": 2,
+            "type": "string"
+          },
+          "memberNickName": {
+            "maxLength": 15,
+            "minLength": 2,
+            "type": "string"
+          },
+          "memberPhone": {
+            "maxLength": 10,
+            "minLength": 9,
+            "pattern": "^[0-9]*$",
+            "type": "string"
+          },
+          "memberLineId": {
+            "maxLength": 30,
+            "minLength": 2,
+            "type": "string"
+          },
+          "memberEmail": {
+            "type": "string"
+          },
+          "memberSex": {
+            "type": "string"
+          },
+          "jobTypeId": {
+            "pattern": "^(2[0-3]|1[0-9]|[1-9])$",
+            "type": [
+              "integer",
+              "string"
+            ],
+            "format": "int32"
+          },
+          "jobDescription": {
+            "maxLength": 60,
+            "minLength": 2,
+            "type": "string"
+          },
+          "interestedInLiveYes": {
+            "type": "boolean"
+          },
+          "cityCode": {
+            "pattern": "^(2[0-3]|1[0-9]|[1-9])$",
+            "type": [
+              "integer",
+              "string"
+            ],
+            "format": "int32"
+          },
+          "address": {
+            "maxLength": 60,
+            "minLength": 5,
+            "type": "string"
+          },
+          "memberAvatar": {
+            "oneOf": [
+              {
+                "type": "null"
+              },
+              {
+                "$ref": "#/components/schemas/IFormFile"
+              }
+            ]
+          },
+          "memberPassword": {
+            "maxLength": 12,
+            "minLength": 8,
+            "pattern": "^[a-zA-Z0-9]*$",
+            "type": "string"
+          },
+          "memberPasswordAgain": {
+            "type": "string"
+          },
+          "memberBirthday": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      },
+      "StandardResponse": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "string"
+          },
+          "message": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  },
+  "tags": [
+    {
+      "name": "KFRoom.ApiService"
+    }
+  ]
+}

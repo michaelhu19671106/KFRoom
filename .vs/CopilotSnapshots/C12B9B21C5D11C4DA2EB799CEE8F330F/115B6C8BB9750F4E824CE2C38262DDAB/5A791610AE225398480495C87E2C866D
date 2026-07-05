@@ -1,0 +1,32 @@
+﻿@ApiService_HostAddress = https://localhost:7432
+
+### 取得 Antiforgery Token
+# @name getAntiforgeryToken
+GET https://localhost:59234/antiforgery/token
+Accept: application/json
+
+### 新增會員 - 帶 Antiforgery
+POST https://localhost:59234/AddMemberAsync
+Accept: application/json
+X-CSRF-TOKEN: {{getAntiforgeryToken.response.body.$.token}}
+Content-Type: multipart/form-data; boundary=----WebAppBoundary
+
+------WebAppBoundary
+Content-Disposition: form-data; name="MemberAccount"
+
+user01
+------WebAppBoundary
+Content-Disposition: form-data; name="MemberPassword"
+
+P@ssw0rd!
+------WebAppBoundary
+Content-Disposition: form-data; name="MemberAvatar"; filename="web.png"
+Content-Type: image/png
+
+< ./web.png
+------WebAppBoundary--
+
+###
+````````
+
+# Response
