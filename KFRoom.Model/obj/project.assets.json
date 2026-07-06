@@ -911,11 +911,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\資料D\\教學\\範例2021\\13.軟體工程-專案開發實務\\Ch10\\KFRoom\\KFRoom.Model\\KFRoom.Model.csproj",
+      "projectUniqueName": "C:\\資料D\\教學\\範例2021\\13.軟體工程-專案開發實務\\Ch11\\KFRoom\\KFRoom.Model\\KFRoom.Model.csproj",
       "projectName": "KFRoom.Model",
-      "projectPath": "C:\\資料D\\教學\\範例2021\\13.軟體工程-專案開發實務\\Ch10\\KFRoom\\KFRoom.Model\\KFRoom.Model.csproj",
+      "projectPath": "C:\\資料D\\教學\\範例2021\\13.軟體工程-專案開發實務\\Ch11\\KFRoom\\KFRoom.Model\\KFRoom.Model.csproj",
       "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-      "outputPath": "C:\\資料D\\教學\\範例2021\\13.軟體工程-專案開發實務\\Ch10\\KFRoom\\KFRoom.Model\\obj\\",
+      "outputPath": "C:\\資料D\\教學\\範例2021\\13.軟體工程-專案開發實務\\Ch11\\KFRoom\\KFRoom.Model\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
