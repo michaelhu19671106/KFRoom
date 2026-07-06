@@ -1,6 +1,8 @@
 <Solution>
   <Project Path="KFRoom.ApiService/KFRoom.ApiService.csproj" />
   <Project Path="KFRoom.AppHost/KFRoom.AppHost.csproj" />
+  <Project Path="KFRoom.E2ETest/KFRoom.E2ETest.csproj" Id="d5a503c4-71f9-4347-b857-eac643f83bd5" />
+  <Project Path="KFRoom.IntegrationTest/KFRoom.IntegrationTest.csproj" Id="491bbc50-5818-4503-ab0a-45274ebcda09" />
   <Project Path="KFRoom.Model/KFRoom.Model.csproj" Id="55578fd7-f577-4be0-80bd-af7173dbccda" />
   <Project Path="KFRoom.ServiceDefaults/KFRoom.ServiceDefaults.csproj" />
   <Project Path="KFRoom.Tests/KFRoom.Tests.csproj" />

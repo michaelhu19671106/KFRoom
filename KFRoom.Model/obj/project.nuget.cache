@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "qc1Wq9e1M7Y=",
+  "dgSpecHash": "uESUKnzftME=",
   "success": true,
-  "projectFilePath": "C:\\資料D\\教學\\範例2021\\13.軟體工程-專案開發實務\\Ch10\\KFRoom\\KFRoom.Model\\KFRoom.Model.csproj",
+  "projectFilePath": "C:\\資料D\\教學\\範例2021\\13.軟體工程-專案開發實務\\Ch11\\KFRoom\\KFRoom.Model\\KFRoom.Model.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\user\\.nuget\\packages\\microsoft.aspnetcore.authorization\\10.0.8\\microsoft.aspnetcore.authorization.10.0.8.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\microsoft.aspnetcore.components\\10.0.8\\microsoft.aspnetcore.components.10.0.8.nupkg.sha512",

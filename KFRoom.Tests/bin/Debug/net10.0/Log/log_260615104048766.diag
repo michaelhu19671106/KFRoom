@@ -1,0 +1,18 @@
+2026-06-15T10:40:48.7720448+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Version: 1.8.2+3f3895006fbd911d9b09cf9cafebc5f6cb7dd10d
+2026-06-15T10:40:48.7796542+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Logging mode: asynchronous
+2026-06-15T10:40:48.7803184+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Logging level: Information
+2026-06-15T10:40:48.7803222+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION CreateBuilderAsync entry time: 10:40:48.755
+2026-06-15T10:40:48.7803831+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION PID: 28812
+2026-06-15T10:40:48.7804084+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Runtime information: win-x64 - .NET 10.0.9
+2026-06-15T10:40:48.7804211+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Runtime location: C:\Program Files\dotnet\shared\Microsoft.NETCore.App\10.0.9\System.Private.CoreLib.dll
+2026-06-15T10:40:48.7804302+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION IsDynamicCodeSupported: True
+2026-06-15T10:40:48.7804911+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Test module: C:\資料D\教學\範例2021\13.軟體工程-專案開發實務\Ch11\KFRoom\KFRoom.Tests\bin\Debug\net10.0\KFRoom.Tests.dll
+2026-06-15T10:40:48.7805863+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Command line arguments: '--server --diagnostic --diagnostic-verbosity Information --diagnostic-output-directory C:\資料D\教學\範例2021\13.軟體工程-專案開發實務\Ch11\KFRoom\KFRoom.Tests\bin\Debug\net10.0\Log --results-directory C:\資料D\教學\範例2021\13.軟體工程-專案開發實務\Ch11\KFRoom\TestResults --client-port 51315'
+2026-06-15T10:40:48.7811574+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION TESTINGPLATFORM_DEFAULT_HANG_TIMEOUT: ''
+2026-06-15T10:40:48.7949670+00:00 Microsoft.Testing.Platform.Hosts.TestHostBuilder INFORMATION Setting RegisterEnvironmentVariablesConfigurationSource: 'True'
+2026-06-15T10:40:48.8047001+00:00 Microsoft.Testing.Platform.Hosts.TestHostBuilder INFORMATION Setting PlatformExitProcessOnUnhandledException: 'False', config file: False environment variable: 
+2026-06-15T10:40:48.9582803+00:00 Microsoft.Testing.Platform.Requests.TestHostTestFrameworkInvoker INFORMATION Test framework UID: '30ea7c6e-dd24-4152-a360-1387158cd41d' Version: '3.0.1' DisplayName: 'xUnit.net v3 Microsoft.Testing.Platform test framework' Description: 'xUnit.net v3 Microsoft.Testing.Platform test framework'
+2026-06-15T10:40:48.9613441+00:00 xUnit.net INFORMATION xUnit.net v3 In-Process Runner v3.0.1+9214bef154 (64-bit .NET 10.0.9)
+2026-06-15T10:40:48.9937648+00:00 xUnit.net INFORMATION   Discovering: KFRoom.Tests
+2026-06-15T10:40:49.0206696+00:00 xUnit.net INFORMATION   Discovered:  KFRoom.Tests
+2026-06-15T10:40:49.0369884+00:00 xUnit.net INFORMATION   Starting:    KFRoom.Tests

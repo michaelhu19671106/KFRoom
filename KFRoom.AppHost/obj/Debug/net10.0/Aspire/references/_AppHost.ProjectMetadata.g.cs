@@ -17,5 +17,5 @@ public class KFRoom_AppHost
     /// <summary>
     /// The path to the Aspire Host project.
     /// </summary>
-    public static string ProjectPath => """C:\資料D\教學\範例2021\13.軟體工程-專案開發實務\Ch10\KFRoom\KFRoom.AppHost""";
+    public static string ProjectPath => """C:\資料D\教學\範例2021\13.軟體工程-專案開發實務\Ch11\KFRoom\KFRoom.AppHost""";
 }

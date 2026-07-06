@@ -5,7 +5,7 @@ namespace KFRoom.Tests;
 public class WebTests
 {
     private static readonly TimeSpan DefaultTimeout = TimeSpan.FromSeconds(30);
-
+    // 測試WebResource根目錄是否能夠正確回應HTTP 200 OK狀態碼
     [Fact]
     public async Task GetWebResourceRootReturnsOkStatusCode()
     {

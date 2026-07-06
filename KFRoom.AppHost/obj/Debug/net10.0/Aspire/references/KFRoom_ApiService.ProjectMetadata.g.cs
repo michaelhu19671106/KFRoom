@@ -15,7 +15,7 @@ public class KFRoom_ApiService : global::Aspire.Hosting.IProjectMetadata
     /// <summary>
     /// The path to the KFRoom_ApiService project.
     /// </summary>
-    public string ProjectPath => """C:\資料D\教學\範例2021\13.軟體工程-專案開發實務\Ch10\KFRoom\KFRoom.ApiService\KFRoom.ApiService.csproj""";
+    public string ProjectPath => """C:\資料D\教學\範例2021\13.軟體工程-專案開發實務\Ch11\KFRoom\KFRoom.ApiService\KFRoom.ApiService.csproj""";
 
     /// <summary>
     /// Gets a value indicating whether building the project before running it should be suppressed.
