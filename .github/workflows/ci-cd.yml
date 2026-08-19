@@ -53,8 +53,8 @@ jobs:
         with:
           dotnet-version: '10.0.x'
 
-      - name: Publish project
-        run: dotnet publish -c Release -o ./publish
+      - name: Publish ApiService
+        run: dotnet publish KFRoom.ApiService/KFRoom.ApiService.csproj -o ./publish/ApiService
 
       - name: Azure Login (OIDC)
         uses: azure/login@v1
