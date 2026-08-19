@@ -151,7 +151,7 @@ app.MapPost("/Account/LoginAsync", async Task<LoginResponse> (LoginModel model, 
         //}
         response.accessToken = token;
         response.code = "0";
-        response.message = "Finished";
+        response.message = "Success";
         return response;
     }
     catch(Exception ex)

@@ -1,22 +1,22 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\\u8CC7\u6599D\\\u6559\u5B78\\\u7BC4\u4F8B2021\\13.\u8EDF\u9AD4\u5DE5\u7A0B-\u5C08\u6848\u958B\u767C\u5BE6\u52D9\\Ch11\\KFRoom\\",
+  "WorkspaceRootPath": "C:\\\u8CC7\u6599D\\\u6559\u5B78\\\u7BC4\u4F8B2021\\13.\u8EDF\u9AD4\u5DE5\u7A0B-\u5C08\u6848\u958B\u767C\u5BE6\u52D9\\Ch12\\KFRoom\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B599ACA4-13C8-55AB-ACA7-B510572DEA82}|KFRoom.Web\\KFRoom.Web.csproj|c:\\\u8CC7\u6599d\\\u6559\u5B78\\\u7BC4\u4F8B2021\\13.\u8EDF\u9AD4\u5DE5\u7A0B-\u5C08\u6848\u958B\u767C\u5BE6\u52D9\\ch11\\kfroom\\kfroom.web\\services\\accountservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B599ACA4-13C8-55AB-ACA7-B510572DEA82}|KFRoom.Web\\KFRoom.Web.csproj|solutionrelative:kfroom.web\\services\\accountservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EB7D9966-1105-6247-A642-AD41F66437FA}|KFRoom.ApiService\\KFRoom.ApiService.csproj|c:\\\u8CC7\u6599d\\\u6559\u5B78\\\u7BC4\u4F8B2021\\13.\u8EDF\u9AD4\u5DE5\u7A0B-\u5C08\u6848\u958B\u767C\u5BE6\u52D9\\ch11\\kfroom\\kfroom.apiservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{EB7D9966-1105-6247-A642-AD41F66437FA}|KFRoom.ApiService\\KFRoom.ApiService.csproj|c:\\\u8CC7\u6599d\\\u6559\u5B78\\\u7BC4\u4F8B2021\\13.\u8EDF\u9AD4\u5DE5\u7A0B-\u5C08\u6848\u958B\u767C\u5BE6\u52D9\\ch12\\kfroom\\kfroom.apiservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EB7D9966-1105-6247-A642-AD41F66437FA}|KFRoom.ApiService\\KFRoom.ApiService.csproj|solutionrelative:kfroom.apiservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EB7D9966-1105-6247-A642-AD41F66437FA}|KFRoom.ApiService\\KFRoom.ApiService.csproj|c:\\\u8CC7\u6599d\\\u6559\u5B78\\\u7BC4\u4F8B2021\\13.\u8EDF\u9AD4\u5DE5\u7A0B-\u5C08\u6848\u958B\u767C\u5BE6\u52D9\\ch11\\kfroom\\kfroom.apiservice\\domains\\accountdomain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EB7D9966-1105-6247-A642-AD41F66437FA}|KFRoom.ApiService\\KFRoom.ApiService.csproj|solutionrelative:kfroom.apiservice\\domains\\accountdomain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EB7D9966-1105-6247-A642-AD41F66437FA}|KFRoom.ApiService\\KFRoom.ApiService.csproj|c:\\\u8CC7\u6599d\\\u6559\u5B78\\\u7BC4\u4F8B2021\\13.\u8EDF\u9AD4\u5DE5\u7A0B-\u5C08\u6848\u958B\u767C\u5BE6\u52D9\\ch12\\kfroom\\kfroom.apiservice\\ci-cd.yml||{06C066C6-04A2-4E5D-8202-439FD4234EF1}",
+      "RelativeMoniker": "D:0:0:{EB7D9966-1105-6247-A642-AD41F66437FA}|KFRoom.ApiService\\KFRoom.ApiService.csproj|solutionrelative:kfroom.apiservice\\ci-cd.yml||{06C066C6-04A2-4E5D-8202-439FD4234EF1}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2DE89C8-47BA-F5D8-571C-2B494D22FF0E}|KFRoom.Tests\\KFRoom.Tests.csproj|c:\\\u8CC7\u6599d\\\u6559\u5B78\\\u7BC4\u4F8B2021\\13.\u8EDF\u9AD4\u5DE5\u7A0B-\u5C08\u6848\u958B\u767C\u5BE6\u52D9\\ch11\\kfroom\\kfroom.tests\\webtests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2DE89C8-47BA-F5D8-571C-2B494D22FF0E}|KFRoom.Tests\\KFRoom.Tests.csproj|solutionrelative:kfroom.tests\\webtests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EB7D9966-1105-6247-A642-AD41F66437FA}|KFRoom.ApiService\\KFRoom.ApiService.csproj|c:\\\u8CC7\u6599d\\\u6559\u5B78\\\u7BC4\u4F8B2021\\13.\u8EDF\u9AD4\u5DE5\u7A0B-\u5C08\u6848\u958B\u767C\u5BE6\u52D9\\ch12\\kfroom\\kfroom.apiservice\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{EB7D9966-1105-6247-A642-AD41F66437FA}|KFRoom.ApiService\\KFRoom.ApiService.csproj|solutionrelative:kfroom.apiservice\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB7D9966-1105-6247-A642-AD41F66437FA}|KFRoom.ApiService\\KFRoom.ApiService.csproj|c:\\\u8CC7\u6599d\\\u6559\u5B78\\\u7BC4\u4F8B2021\\13.\u8EDF\u9AD4\u5DE5\u7A0B-\u5C08\u6848\u958B\u767C\u5BE6\u52D9\\ch12\\kfroom\\kfroom.apiservice\\domains\\accountdomain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB7D9966-1105-6247-A642-AD41F66437FA}|KFRoom.ApiService\\KFRoom.ApiService.csproj|solutionrelative:kfroom.apiservice\\domains\\accountdomain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,19 +26,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 215,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
-              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
-            {
-              "$type": "Bookmark",
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
               "$type": "Bookmark",
@@ -49,53 +41,59 @@
               "Name": "ST:0:0:{6324226f-61b6-4f28-92ee-18d4b5fe1e48}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "AccountService.cs",
-              "DocumentMoniker": "C:\\\u8CC7\u6599D\\\u6559\u5B78\\\u7BC4\u4F8B2021\\13.\u8EDF\u9AD4\u5DE5\u7A0B-\u5C08\u6848\u958B\u767C\u5BE6\u52D9\\Ch11\\KFRoom\\KFRoom.Web\\Services\\AccountService.cs",
-              "RelativeDocumentMoniker": "KFRoom.Web\\Services\\AccountService.cs",
-              "ToolTip": "C:\\\u8CC7\u6599D\\\u6559\u5B78\\\u7BC4\u4F8B2021\\13.\u8EDF\u9AD4\u5DE5\u7A0B-\u5C08\u6848\u958B\u767C\u5BE6\u52D9\\Ch11\\KFRoom\\KFRoom.Web\\Services\\AccountService.cs",
-              "RelativeToolTip": "KFRoom.Web\\Services\\AccountService.cs",
-              "ViewState": "AgIAADkAAAAAAAAAAAAYwDQAAABXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-02T06:40:14.282Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\\u8CC7\u6599D\\\u6559\u5B78\\\u7BC4\u4F8B2021\\13.\u8EDF\u9AD4\u5DE5\u7A0B-\u5C08\u6848\u958B\u767C\u5BE6\u52D9\\Ch11\\KFRoom\\KFRoom.ApiService\\Program.cs",
-              "RelativeDocumentMoniker": "KFRoom.ApiService\\Program.cs",
-              "ToolTip": "C:\\\u8CC7\u6599D\\\u6559\u5B78\\\u7BC4\u4F8B2021\\13.\u8EDF\u9AD4\u5DE5\u7A0B-\u5C08\u6848\u958B\u767C\u5BE6\u52D9\\Ch11\\KFRoom\\KFRoom.ApiService\\Program.cs",
-              "RelativeToolTip": "KFRoom.ApiService\\Program.cs",
-              "ViewState": "AgIAAEYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-02T06:39:29.627Z"
+              "Title": "ci-cd.yml",
+              "DocumentMoniker": "C:\\\u8CC7\u6599D\\\u6559\u5B78\\\u7BC4\u4F8B2021\\13.\u8EDF\u9AD4\u5DE5\u7A0B-\u5C08\u6848\u958B\u767C\u5BE6\u52D9\\Ch12\\KFRoom\\KFRoom.ApiService\\ci-cd.yml",
+              "RelativeDocumentMoniker": "KFRoom.ApiService\\ci-cd.yml",
+              "ToolTip": "C:\\\u8CC7\u6599D\\\u6559\u5B78\\\u7BC4\u4F8B2021\\13.\u8EDF\u9AD4\u5DE5\u7A0B-\u5C08\u6848\u958B\u767C\u5BE6\u52D9\\Ch12\\KFRoom\\KFRoom.ApiService\\ci-cd.yml",
+              "RelativeToolTip": "KFRoom.ApiService\\ci-cd.yml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003775|",
+              "WhenOpened": "2026-08-18T12:27:57.406Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "AccountDomain.cs",
-              "DocumentMoniker": "C:\\\u8CC7\u6599D\\\u6559\u5B78\\\u7BC4\u4F8B2021\\13.\u8EDF\u9AD4\u5DE5\u7A0B-\u5C08\u6848\u958B\u767C\u5BE6\u52D9\\Ch11\\KFRoom\\KFRoom.ApiService\\Domains\\AccountDomain.cs",
-              "RelativeDocumentMoniker": "KFRoom.ApiService\\Domains\\AccountDomain.cs",
-              "ToolTip": "C:\\\u8CC7\u6599D\\\u6559\u5B78\\\u7BC4\u4F8B2021\\13.\u8EDF\u9AD4\u5DE5\u7A0B-\u5C08\u6848\u958B\u767C\u5BE6\u52D9\\Ch11\\KFRoom\\KFRoom.ApiService\\Domains\\AccountDomain.cs",
-              "RelativeToolTip": "KFRoom.ApiService\\Domains\\AccountDomain.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\\u8CC7\u6599D\\\u6559\u5B78\\\u7BC4\u4F8B2021\\13.\u8EDF\u9AD4\u5DE5\u7A0B-\u5C08\u6848\u958B\u767C\u5BE6\u52D9\\Ch12\\KFRoom\\KFRoom.ApiService\\appsettings.json",
+              "RelativeDocumentMoniker": "KFRoom.ApiService\\appsettings.json",
+              "ToolTip": "C:\\\u8CC7\u6599D\\\u6559\u5B78\\\u7BC4\u4F8B2021\\13.\u8EDF\u9AD4\u5DE5\u7A0B-\u5C08\u6848\u958B\u767C\u5BE6\u52D9\\Ch12\\KFRoom\\KFRoom.ApiService\\appsettings.json",
+              "RelativeToolTip": "KFRoom.ApiService\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-07-24T06:43:24.543Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\\u8CC7\u6599D\\\u6559\u5B78\\\u7BC4\u4F8B2021\\13.\u8EDF\u9AD4\u5DE5\u7A0B-\u5C08\u6848\u958B\u767C\u5BE6\u52D9\\Ch12\\KFRoom\\KFRoom.ApiService\\Program.cs",
+              "RelativeDocumentMoniker": "KFRoom.ApiService\\Program.cs",
+              "ToolTip": "C:\\\u8CC7\u6599D\\\u6559\u5B78\\\u7BC4\u4F8B2021\\13.\u8EDF\u9AD4\u5DE5\u7A0B-\u5C08\u6848\u958B\u767C\u5BE6\u52D9\\Ch12\\KFRoom\\KFRoom.ApiService\\Program.cs",
+              "RelativeToolTip": "KFRoom.ApiService\\Program.cs",
+              "ViewState": "AgIAAIwAAAAAAAAAAAAAAJUAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-02T06:38:18.656Z"
+              "WhenOpened": "2026-07-02T06:39:29.627Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "WebTests.cs",
-              "DocumentMoniker": "C:\\\u8CC7\u6599D\\\u6559\u5B78\\\u7BC4\u4F8B2021\\13.\u8EDF\u9AD4\u5DE5\u7A0B-\u5C08\u6848\u958B\u767C\u5BE6\u52D9\\Ch11\\KFRoom\\KFRoom.Tests\\WebTests.cs",
-              "RelativeDocumentMoniker": "KFRoom.Tests\\WebTests.cs",
-              "ToolTip": "C:\\\u8CC7\u6599D\\\u6559\u5B78\\\u7BC4\u4F8B2021\\13.\u8EDF\u9AD4\u5DE5\u7A0B-\u5C08\u6848\u958B\u767C\u5BE6\u52D9\\Ch11\\KFRoom\\KFRoom.Tests\\WebTests.cs",
-              "RelativeToolTip": "KFRoom.Tests\\WebTests.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAABPAAAAAAAAAA==",
+              "Title": "AccountDomain.cs",
+              "DocumentMoniker": "C:\\\u8CC7\u6599D\\\u6559\u5B78\\\u7BC4\u4F8B2021\\13.\u8EDF\u9AD4\u5DE5\u7A0B-\u5C08\u6848\u958B\u767C\u5BE6\u52D9\\Ch12\\KFRoom\\KFRoom.ApiService\\Domains\\AccountDomain.cs",
+              "RelativeDocumentMoniker": "KFRoom.ApiService\\Domains\\AccountDomain.cs",
+              "ToolTip": "C:\\\u8CC7\u6599D\\\u6559\u5B78\\\u7BC4\u4F8B2021\\13.\u8EDF\u9AD4\u5DE5\u7A0B-\u5C08\u6848\u958B\u767C\u5BE6\u52D9\\Ch12\\KFRoom\\KFRoom.ApiService\\Domains\\AccountDomain.cs",
+              "RelativeToolTip": "KFRoom.ApiService\\Domains\\AccountDomain.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-01T02:56:35.317Z"
+              "WhenOpened": "2026-07-02T06:38:18.656Z"
             }
           ]
         },
@@ -110,6 +108,10 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:2:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
             }
           ]
         }
