@@ -24,7 +24,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("KFRoom.AppHost")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f59910e06c5fb3bbe716c2166de6e4040166e911")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3e230182c29fe73198c18ac8dd8080652ca475e5")]
 [assembly: System.Reflection.AssemblyProductAttribute("KFRoom.AppHost")]
 [assembly: System.Reflection.AssemblyTitleAttribute("KFRoom.AppHost")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
