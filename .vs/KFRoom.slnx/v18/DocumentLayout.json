@@ -7,10 +7,6 @@
       "RelativeMoniker": "D:0:0:{EB7D9966-1105-6247-A642-AD41F66437FA}|KFRoom.ApiService\\KFRoom.ApiService.csproj|solutionrelative:kfroom.apiservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EB7D9966-1105-6247-A642-AD41F66437FA}|KFRoom.ApiService\\KFRoom.ApiService.csproj|c:\\\u8CC7\u6599d\\\u6559\u5B78\\\u7BC4\u4F8B2021\\13.\u8EDF\u9AD4\u5DE5\u7A0B-\u5C08\u6848\u958B\u767C\u5BE6\u52D9\\ch12\\kfroom\\kfroom.apiservice\\ci-cd.yml||{06C066C6-04A2-4E5D-8202-439FD4234EF1}",
-      "RelativeMoniker": "D:0:0:{EB7D9966-1105-6247-A642-AD41F66437FA}|KFRoom.ApiService\\KFRoom.ApiService.csproj|solutionrelative:kfroom.apiservice\\ci-cd.yml||{06C066C6-04A2-4E5D-8202-439FD4234EF1}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{EB7D9966-1105-6247-A642-AD41F66437FA}|KFRoom.ApiService\\KFRoom.ApiService.csproj|c:\\\u8CC7\u6599d\\\u6559\u5B78\\\u7BC4\u4F8B2021\\13.\u8EDF\u9AD4\u5DE5\u7A0B-\u5C08\u6848\u958B\u767C\u5BE6\u52D9\\ch12\\kfroom\\kfroom.apiservice\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{EB7D9966-1105-6247-A642-AD41F66437FA}|KFRoom.ApiService\\KFRoom.ApiService.csproj|solutionrelative:kfroom.apiservice\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
@@ -26,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 215,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -47,19 +43,6 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "ci-cd.yml",
-              "DocumentMoniker": "C:\\\u8CC7\u6599D\\\u6559\u5B78\\\u7BC4\u4F8B2021\\13.\u8EDF\u9AD4\u5DE5\u7A0B-\u5C08\u6848\u958B\u767C\u5BE6\u52D9\\Ch12\\KFRoom\\KFRoom.ApiService\\ci-cd.yml",
-              "RelativeDocumentMoniker": "KFRoom.ApiService\\ci-cd.yml",
-              "ToolTip": "C:\\\u8CC7\u6599D\\\u6559\u5B78\\\u7BC4\u4F8B2021\\13.\u8EDF\u9AD4\u5DE5\u7A0B-\u5C08\u6848\u958B\u767C\u5BE6\u52D9\\Ch12\\KFRoom\\KFRoom.ApiService\\ci-cd.yml",
-              "RelativeToolTip": "KFRoom.ApiService\\ci-cd.yml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003775|",
-              "WhenOpened": "2026-08-18T12:27:57.406Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\\u8CC7\u6599D\\\u6559\u5B78\\\u7BC4\u4F8B2021\\13.\u8EDF\u9AD4\u5DE5\u7A0B-\u5C08\u6848\u958B\u767C\u5BE6\u52D9\\Ch12\\KFRoom\\KFRoom.ApiService\\appsettings.json",
               "RelativeDocumentMoniker": "KFRoom.ApiService\\appsettings.json",
@@ -67,8 +50,7 @@
               "RelativeToolTip": "KFRoom.ApiService\\appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-07-24T06:43:24.543Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-24T06:43:24.543Z"
             },
             {
               "$type": "Document",
@@ -78,14 +60,14 @@
               "RelativeDocumentMoniker": "KFRoom.ApiService\\Program.cs",
               "ToolTip": "C:\\\u8CC7\u6599D\\\u6559\u5B78\\\u7BC4\u4F8B2021\\13.\u8EDF\u9AD4\u5DE5\u7A0B-\u5C08\u6848\u958B\u767C\u5BE6\u52D9\\Ch12\\KFRoom\\KFRoom.ApiService\\Program.cs",
               "RelativeToolTip": "KFRoom.ApiService\\Program.cs",
-              "ViewState": "AgIAAIwAAAAAAAAAAAAAAJUAAAAiAAAAAAAAAA==",
+              "ViewState": "AgIAAIwAAAAAAAAAAAAAAJMAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-07-02T06:39:29.627Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "AccountDomain.cs",
               "DocumentMoniker": "C:\\\u8CC7\u6599D\\\u6559\u5B78\\\u7BC4\u4F8B2021\\13.\u8EDF\u9AD4\u5DE5\u7A0B-\u5C08\u6848\u958B\u767C\u5BE6\u52D9\\Ch12\\KFRoom\\KFRoom.ApiService\\Domains\\AccountDomain.cs",
               "RelativeDocumentMoniker": "KFRoom.ApiService\\Domains\\AccountDomain.cs",
