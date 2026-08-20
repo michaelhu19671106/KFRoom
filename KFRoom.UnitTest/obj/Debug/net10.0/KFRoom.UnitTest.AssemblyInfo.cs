@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("KFRoom.UnitTest")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3e230182c29fe73198c18ac8dd8080652ca475e5")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+aef894615ae91dea4e9b47011918b2aee34843ec")]
 [assembly: System.Reflection.AssemblyProductAttribute("KFRoom.UnitTest")]
 [assembly: System.Reflection.AssemblyTitleAttribute("KFRoom.UnitTest")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
