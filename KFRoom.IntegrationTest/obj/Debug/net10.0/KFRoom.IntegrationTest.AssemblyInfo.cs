@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("KFRoom.IntegrationTest")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+25964c13fd18f988dc0a6e8beca641e2adbde63f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+082d4d7f89c9be4d0cd239b20fbefd5cce251f34")]
 [assembly: System.Reflection.AssemblyProductAttribute("KFRoom.IntegrationTest")]
 [assembly: System.Reflection.AssemblyTitleAttribute("KFRoom.IntegrationTest")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
